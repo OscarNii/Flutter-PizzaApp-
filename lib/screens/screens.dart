@@ -1,42 +1,26 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
+import 'package:nice/screens/pages/page1.dart';
+import 'package:nice/screens/pages/page2.dart';
+import 'package:nice/screens/pages/page3.dart';
+import 'package:nice/screens/pages/page4.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class Screens extends StatefulWidget {
-  const Screens({Key? key}) : super(key: key);
+class Screens extends StatelessWidget {
+  final _controller = PageController();
 
-  @override
-  State<Screens> createState() => _ScreensState();
-}
-
-class _ScreensState extends State<Screens> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
+        controller: _controller,
         children: [
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/fries.png'),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/pizza.png'),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/drink.png'),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
+          const Page1(),
+          const Page2(),
+          const Page3(),
+          const Page4(),
+          SmoothPageIndicator(controller: _controller, count: 4),
         ],
       ),
     );
