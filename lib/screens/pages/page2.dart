@@ -7,21 +7,60 @@ class Page2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ShaderMask(
-      shaderCallback: (bounds) => LinearGradient(
-        colors: [Colors.black, Colors.black12],
-        begin: Alignment.bottomCenter,
-        end: Alignment.topCenter,
-      ).createShader(bounds),
-      blendMode: BlendMode.darken,
-      child: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/egg.png'),
-            fit: BoxFit.cover,
+    return Stack(
+      children: [
+        ShaderMask(
+          shaderCallback: (bounds) => LinearGradient(
+            colors: [Colors.black, Colors.black12],
+            begin: Alignment.bottomCenter,
+            end: Alignment.topCenter,
+          ).createShader(bounds),
+          blendMode: BlendMode.darken,
+          child: Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/egg.png'),
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
         ),
-      ),
+        Scaffold(
+          backgroundColor: Colors.transparent,
+          body: SafeArea(
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Container(
+                      padding: EdgeInsets.all(25),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.black38,
+                        border: Border.all(
+                          color: Colors.blue,
+                        ),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Sign In',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        )
+      ],
     );
   }
 }
