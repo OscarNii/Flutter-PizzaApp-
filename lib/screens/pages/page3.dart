@@ -31,122 +31,136 @@ class _Page3State extends State<Page3> {
           ),
         ),
         Scaffold(
-            backgroundColor: Colors.transparent,
-            body: SafeArea(
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(height: 12),
-                    Text(
-                      'Hello Again!',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 45,
-                        color: Colors.white,
-                      ),
+          backgroundColor: Colors.transparent,
+          body: SafeArea(
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(height: 12),
+                  Text(
+                    'Hello Again!',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 45,
+                      color: Colors.white,
                     ),
-                    SizedBox(height: 15),
-                    Text(
-                      'Welcome back, you\'ve been missed',
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: Colors.white,
-                      ),
+                  ),
+                  SizedBox(height: 15),
+                  Text(
+                    'Welcome back, you\'ve been missed',
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.white,
                     ),
-                    SizedBox(height: 50),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          border: Border.all(
-                            color: Colors.white,
-                          ),
-                          borderRadius: BorderRadius.circular(14),
+                  ),
+                  SizedBox(height: 50),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.black38,
+                        border: Border.all(
+                          color: Colors.white,
                         ),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 20.0),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: 'Email or Username',
+                        borderRadius: BorderRadius.circular(14),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20.0),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Email or Username',
+                            hintStyle:
+                                TextStyle(fontSize: 17.0, color: Colors.white),
+                            prefixIcon: Icon(
+                              Icons.email_rounded,
+                              color: Colors.white,
                             ),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(height: 20),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          border: Border.all(
-                            color: Colors.white,
-                          ),
-                          borderRadius: BorderRadius.circular(14),
+                  ),
+                  SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.black38,
+                        border: Border.all(
+                          color: Colors.white,
                         ),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 20.0),
-                          child: TextField(
-                            obscureText: true,
-                            decoration: InputDecoration(
+                        borderRadius: BorderRadius.circular(14),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20.0),
+                        child: TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
                               border: InputBorder.none,
                               hintText: 'Enter Password',
-                            ),
-                          ),
+                              hintStyle: TextStyle(
+                                fontSize: 17.0,
+                                color: Colors.white,
+                              ),
+                              prefixIcon: Icon(
+                                Icons.password_rounded,
+                                color: Colors.white,
+                              )),
                         ),
                       ),
                     ),
-                    SizedBox(height: 20),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                      child: Container(
-                        padding: EdgeInsets.all(25),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
+                  ),
+                  SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Container(
+                      padding: EdgeInsets.all(25),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.black38,
+                        border: Border.all(
                           color: Colors.red,
-                          border: Border.all(
-                            color: Colors.white,
-                          ),
                         ),
-                        child: Center(
-                          child: Text(
-                            'Sign In',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20,
-                            ),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Sign In',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(height: 15),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Not a Member?  ',
-                          style: TextStyle(
-                            color: Colors.red,
-                            fontWeight: FontWeight.bold,
-                          ),
+                  ),
+                  SizedBox(height: 15),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Not a Member?  ',
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontWeight: FontWeight.bold,
                         ),
-                        Text(
-                          'Register Now',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
+                      ),
+                      Text(
+                        'Register Now',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
-                      ],
-                    )
-                  ],
-                ),
+                      ),
+                    ],
+                  )
+                ],
               ),
-            ))
+            ),
+          ),
+        )
       ],
     );
   }
