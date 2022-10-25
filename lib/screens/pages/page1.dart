@@ -23,6 +23,26 @@ class Page1 extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
+            child: Center(
+              child: Column(
+                children: [
+                  Text(
+                    'Eat Well',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'eat Good',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  )
+                ],
+              ),
+            ),
           ),
         ),
       ],
