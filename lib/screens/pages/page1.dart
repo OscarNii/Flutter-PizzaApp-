@@ -35,7 +35,7 @@ class Page1 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Container(
                         padding: EdgeInsets.all(25),
                         decoration: BoxDecoration(
@@ -49,7 +49,7 @@ class Page1 extends StatelessWidget {
                           child: Column(
                             children: [
                               Text(
-                                'Be on Sea diet, You see food',
+                                'Nothing Brings Friends Together than',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
@@ -59,7 +59,7 @@ class Page1 extends StatelessWidget {
                                 height: 10,
                               ),
                               Text(
-                                'You Eat!!',
+                                'Good Food!!',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
