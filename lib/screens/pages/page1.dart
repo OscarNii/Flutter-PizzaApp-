@@ -7,21 +7,25 @@ class Page1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ShaderMask(
-      shaderCallback: (bounds) => LinearGradient(
-        colors: [Colors.black, Colors.black12],
-        begin: Alignment.bottomCenter,
-        end: Alignment.topCenter,
-      ).createShader(bounds),
-      blendMode: BlendMode.darken,
-      child: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/fries.png'),
-            fit: BoxFit.cover,
+    return Stack(
+      children: [
+        ShaderMask(
+          shaderCallback: (bounds) => LinearGradient(
+            colors: [Colors.black, Colors.black12],
+            begin: Alignment.bottomCenter,
+            end: Alignment.topCenter,
+          ).createShader(bounds),
+          blendMode: BlendMode.darken,
+          child: Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/fries.png'),
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
         ),
-      ),
+      ],
     );
   }
 }
