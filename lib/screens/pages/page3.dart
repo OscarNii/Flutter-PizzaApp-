@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Page3 extends StatefulWidget {
   const Page3({Key? key}) : super(key: key);
@@ -40,10 +41,11 @@ class _Page3State extends State<Page3> {
                   SizedBox(height: 12),
                   Text(
                     'Hello Again!',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 45,
-                      color: Colors.white,
+                    style: GoogleFonts.acme(
+                      textStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 70,
+                      ),
                     ),
                   ),
                   SizedBox(height: 15),
@@ -121,7 +123,7 @@ class _Page3State extends State<Page3> {
                         borderRadius: BorderRadius.circular(12),
                         color: Colors.black38,
                         border: Border.all(
-                          color: Colors.red,
+                          color: Colors.blue,
                         ),
                       ),
                       child: Center(

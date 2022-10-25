@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({Key? key}) : super(key: key);
@@ -50,9 +51,11 @@ class Page2 extends StatelessWidget {
                             children: [
                               Text(
                                 'Be on Sea diet, You see food',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
+                                style: GoogleFonts.acme(
+                                  textStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 22,
+                                  ),
                                 ),
                               ),
                               SizedBox(
@@ -60,9 +63,11 @@ class Page2 extends StatelessWidget {
                               ),
                               Text(
                                 'You Eat!!',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
+                                style: GoogleFonts.acme(
+                                  textStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 22,
+                                  ),
                                 ),
                               ),
                             ],
