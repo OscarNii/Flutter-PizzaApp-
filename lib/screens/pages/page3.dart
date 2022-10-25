@@ -116,7 +116,7 @@ class _Page3State extends State<Page3> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25.0),
                     child: Container(
-                      padding: EdgeInsets.all(25),
+                      padding: EdgeInsets.all(15),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         color: Colors.black38,
@@ -130,7 +130,7 @@ class _Page3State extends State<Page3> {
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 20,
+                            fontSize: 30,
                           ),
                         ),
                       ),
