@@ -20,7 +20,7 @@ class Page2 extends StatelessWidget {
           child: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/egg.png'),
+                image: AssetImage('assets/hawai.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -66,7 +66,7 @@ class Page2 extends StatelessWidget {
                                 style: GoogleFonts.acme(
                                   textStyle: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 22,
+                                    fontSize: 28,
                                   ),
                                 ),
                               ),
