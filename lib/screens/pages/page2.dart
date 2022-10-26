@@ -14,7 +14,7 @@ class Page2 extends StatelessWidget {
           shaderCallback: (bounds) => LinearGradient(
             colors: [Colors.black, Colors.black12],
             begin: Alignment.bottomCenter,
-            end: Alignment.topCenter,
+            end: Alignment.center,
           ).createShader(bounds),
           blendMode: BlendMode.darken,
           child: Container(

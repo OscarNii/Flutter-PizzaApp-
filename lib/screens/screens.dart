@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:nice/homepage.dart';
 import 'package:nice/screens/pages/page1.dart';
 import 'package:nice/screens/pages/page2.dart';
 import 'package:nice/screens/pages/page3.dart';
@@ -13,6 +14,8 @@ class Screens extends StatefulWidget {
 
 class _ScreensState extends State<Screens> {
   final PageController _controller = PageController();
+
+  bool onLastPage = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +24,11 @@ class _ScreensState extends State<Screens> {
         children: [
           PageView(
             controller: _controller,
+            onPageChanged: (index) {
+              setState(() {
+                onLastPage = (index == 2);
+              });
+            },
             children: [
               Page1(),
               Page2(),
@@ -32,21 +40,54 @@ class _ScreensState extends State<Screens> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
-                  'Back',
-                  style: TextStyle(
-                      fontSize: 17,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
+                GestureDetector(
+                  onTap: () {
+                    _controller.jumpToPage(2);
+                  },
+                  child: Text(
+                    'Skip',
+                    style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
                 SmoothPageIndicator(controller: _controller, count: 3),
-                Text(
-                  'Foward',
-                  style: TextStyle(
-                      fontSize: 17,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                ),
+                onLastPage
+                    ? GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return HomePage();
+                              },
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'Finish',
+                          style: TextStyle(
+                              fontSize: 17,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      )
+                    : GestureDetector(
+                        onTap: () {
+                          _controller.nextPage(
+                            duration: Duration(milliseconds: 300),
+                            curve: Curves.easeIn,
+                          );
+                        },
+                        child: Text(
+                          'Forward',
+                          style: TextStyle(
+                              fontSize: 17,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
               ],
             ),
           ),

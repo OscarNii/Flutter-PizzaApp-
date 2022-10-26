@@ -19,7 +19,7 @@ class _Page3State extends State<Page3> {
           shaderCallback: (bounds) => LinearGradient(
             colors: [Colors.black, Colors.black12],
             begin: Alignment.bottomCenter,
-            end: Alignment.topCenter,
+            end: Alignment.center,
           ).createShader(bounds),
           blendMode: BlendMode.darken,
           child: Container(
@@ -44,7 +44,14 @@ class _Page3State extends State<Page3> {
                     style: GoogleFonts.acme(
                       textStyle: TextStyle(
                         color: Colors.white,
-                        fontSize: 70,
+                        fontSize: 80,
+                        shadows: <Shadow>[
+                          Shadow(
+                            offset: Offset(2.0, 2.0),
+                            blurRadius: 3.0,
+                            color: Colors.black87,
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -54,6 +61,13 @@ class _Page3State extends State<Page3> {
                     style: TextStyle(
                       fontSize: 22,
                       color: Colors.white,
+                      shadows: <Shadow>[
+                        Shadow(
+                          offset: Offset(2.0, 2.0),
+                          blurRadius: 3.0,
+                          color: Colors.black87,
+                        ),
+                      ],
                     ),
                   ),
                   SizedBox(height: 50),
