@@ -76,7 +76,7 @@ class _ScreensState extends State<Screens> {
                     : GestureDetector(
                         onTap: () {
                           _controller.nextPage(
-                            duration: Duration(milliseconds: 300),
+                            duration: Duration(milliseconds: 500),
                             curve: Curves.easeIn,
                           );
                         },
