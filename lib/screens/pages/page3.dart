@@ -40,11 +40,11 @@ class _Page3State extends State<Page3> {
                 children: [
                   SizedBox(height: 12),
                   Text(
-                    'Hello Again!',
+                    'Food Byte!',
                     style: GoogleFonts.acme(
                       textStyle: TextStyle(
                         color: Colors.white,
-                        fontSize: 80,
+                        fontSize: 85,
                         shadows: <Shadow>[
                           Shadow(
                             offset: Offset(2.0, 2.0),
@@ -59,7 +59,7 @@ class _Page3State extends State<Page3> {
                   Text(
                     'Welcome back, you\'ve been missed',
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 18,
                       color: Colors.white,
                       shadows: <Shadow>[
                         Shadow(
@@ -174,6 +174,14 @@ class _Page3State extends State<Page3> {
                   )
                 ],
               ),
+            ),
+          ),
+          floatingActionButton: Container(
+            height: 120,
+            child: FloatingActionButton(
+              backgroundColor: Colors.red,
+              child: Icon(Icons.chat_bubble),
+              onPressed: () {},
             ),
           ),
         )
