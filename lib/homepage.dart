@@ -89,19 +89,15 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 15),
-              SizedBox(
-                height: 210,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  padding: EdgeInsets.all(8),
-                  child: Row(
-                    children: [
-                      Food(),
-                      Food1(),
-                      Food2(),
-                      Food3(),
-                    ],
-                  ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Food(),
+                    Food1(),
+                    Food2(),
+                    Food3(),
+                  ],
                 ),
               ),
               SizedBox(height: 15),
@@ -127,13 +123,12 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 20),
               Container(
                 decoration: BoxDecoration(
-                    color: Color.fromARGB(79, 255, 255, 255),
+                    color: Colors.black,
                     borderRadius: BorderRadius.circular(17)),
                 child: SizedBox(
                   height: 210,
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
-                    padding: EdgeInsets.symmetric(horizontal: 8),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [

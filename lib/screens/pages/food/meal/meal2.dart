@@ -8,10 +8,10 @@ class Meal2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+      padding: const EdgeInsets.only(left: 15.0),
       child: Container(
-        width: 220,
-        height: 220,
+        width: 170,
+        height: 170,
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           color: Colors.white,

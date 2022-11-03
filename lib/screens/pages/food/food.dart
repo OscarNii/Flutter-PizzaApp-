@@ -8,7 +8,7 @@ class Food extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+      padding: const EdgeInsets.only(left: 5.0),
       child: Container(
         width: 170,
         height: 170,
