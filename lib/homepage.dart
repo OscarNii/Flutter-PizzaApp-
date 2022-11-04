@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.black54,
           body: Column(
             children: [
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Row(
@@ -44,10 +44,20 @@ class HomePage extends StatelessWidget {
                         )
                       ],
                     ),
-                    Icon(
-                      Icons.person_pin,
-                      color: Colors.purple,
-                      size: 45,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(
+                          Icons.notifications_active,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                        Icon(
+                          Icons.person_pin,
+                          color: Colors.white,
+                          size: 60,
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -100,7 +110,7 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 15),
+              SizedBox(height: 45),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Row(
@@ -120,26 +130,23 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(17)),
-                child: SizedBox(
-                  height: 210,
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Meal(),
-                        Meal1(),
-                        Meal2(),
-                      ],
-                    ),
-                  ),
+              SizedBox(height: 45),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Meal(),
+                    SizedBox(width: 12),
+                    Meal1(),
+                    SizedBox(width: 12),
+                    Meal2(),
+                    SizedBox(width: 12),
+                    Meal(),
+                    SizedBox(width: 12),
+                  ],
                 ),
               ),
+              SizedBox(height: 15),
             ],
           ),
           bottomNavigationBar: GNav(

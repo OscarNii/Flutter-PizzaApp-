@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -8,18 +8,45 @@ class Meal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 5.0),
+      padding: const EdgeInsets.only(left: 2.0),
       child: Container(
-        width: 170,
-        height: 170,
-        padding: EdgeInsets.all(20),
+        width: 200,
         decoration: BoxDecoration(
-          color: Colors.white,
           border: Border.all(color: Colors.white),
           borderRadius: BorderRadius.circular(24),
-          image: DecorationImage(
-            image: AssetImage('assets/fufu.jpg'),
-            fit: BoxFit.fill,
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(30),
+          child: Column(
+            children: [
+              Image(
+                height: 200,
+                width: 200,
+                image: AssetImage('assets/jollof.jpg'),
+                fit: BoxFit.cover,
+              ),
+              SizedBox(height: 7),
+              Text(
+                'Assoted Jollof Rice',
+                style: TextStyle(fontSize: 17, color: Colors.white),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.star,
+                    color: Colors.yellow,
+                  ),
+                  Text(
+                    '  5.2(400)',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),

@@ -17,6 +17,10 @@ class Food2 extends StatelessWidget {
           color: Colors.white,
           border: Border.all(color: Colors.white),
           borderRadius: BorderRadius.circular(24),
+          image: DecorationImage(
+            image: AssetImage('assets/salad.jpg'),
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );

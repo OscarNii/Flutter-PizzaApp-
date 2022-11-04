@@ -20,7 +20,7 @@ class Page2 extends StatelessWidget {
           child: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/hawai.png'),
+                image: AssetImage('assets/joloof.jpg'),
                 fit: BoxFit.cover,
               ),
             ),

@@ -18,8 +18,8 @@ class Food extends StatelessWidget {
           border: Border.all(color: Colors.white),
           borderRadius: BorderRadius.circular(24),
           image: DecorationImage(
-            image: AssetImage('assets/big pizzaa.png'),
-            fit: BoxFit.fill,
+            image: AssetImage('assets/joloof.jpg'),
+            fit: BoxFit.cover,
           ),
         ),
       ),
