@@ -25,7 +25,7 @@ class _Page3State extends State<Page3> {
           child: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/pizzza.png'),
+                image: AssetImage('assets/salad.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -47,8 +47,8 @@ class _Page3State extends State<Page3> {
                         fontSize: 85,
                         shadows: <Shadow>[
                           Shadow(
-                            offset: Offset(2.0, 2.0),
-                            blurRadius: 3.0,
+                            offset: Offset(10.0, 10.0),
+                            blurRadius: 30.0,
                             color: Colors.black87,
                           ),
                         ],
@@ -135,9 +135,9 @@ class _Page3State extends State<Page3> {
                       padding: EdgeInsets.all(15),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
-                        color: Colors.black38,
+                        color: Color.fromARGB(106, 155, 39, 176),
                         border: Border.all(
-                          color: Colors.blue,
+                          color: Colors.white,
                         ),
                       ),
                       child: Center(
@@ -157,9 +157,9 @@ class _Page3State extends State<Page3> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Not a Member?  ',
+                        'Not a Member ?  ',
                         style: TextStyle(
-                          color: Colors.red,
+                          color: Colors.white,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -179,7 +179,7 @@ class _Page3State extends State<Page3> {
           floatingActionButton: Container(
             height: 120,
             child: FloatingActionButton(
-              backgroundColor: Colors.red,
+              backgroundColor: Colors.purple,
               child: Icon(Icons.chat_bubble),
               onPressed: () {},
             ),
