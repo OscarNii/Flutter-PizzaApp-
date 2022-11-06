@@ -41,9 +41,9 @@ class Page2 extends StatelessWidget {
                         padding: EdgeInsets.all(25),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Colors.black38,
+                          color: Color.fromARGB(77, 155, 39, 176),
                           border: Border.all(
-                            color: Colors.blue,
+                            color: Colors.white,
                           ),
                         ),
                         child: Center(

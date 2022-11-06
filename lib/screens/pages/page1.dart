@@ -20,7 +20,7 @@ class Page1 extends StatelessWidget {
           child: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/big pizza.jpeg'),
+                image: AssetImage('assets/salad1.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -41,9 +41,9 @@ class Page1 extends StatelessWidget {
                         padding: EdgeInsets.all(25),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Colors.black38,
+                          color: Color.fromARGB(77, 155, 39, 176),
                           border: Border.all(
-                            color: Colors.blue,
+                            color: Colors.white,
                           ),
                         ),
                         child: Center(
