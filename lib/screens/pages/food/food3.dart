@@ -10,8 +10,8 @@ class Food3 extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 15.0),
       child: Container(
-        width: 170,
-        height: 170,
+        width: 180,
+        height: 180,
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           color: Colors.white,
